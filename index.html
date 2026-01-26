@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>法影随行 - 看得懂的法律故事，用得上的维权武器</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                    <h1>法影随行</h1>
+                    <span class="slogan">看得懂的法律故事，用得上的维权武器</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">首页</a></li>
+                <li><a href="theater.html" class="nav-link">法影剧场</a></li>
+                <li><a href="simulator.html" class="nav-link">正义模拟器</a></li>
+                <li><a href="compass.html" class="nav-link">逻辑罗盘</a></li>
+                <li><a href="toolbox.html" class="nav-link">维权工具箱</a></li>
+                <li><a href="volunteer.html" class="nav-link">志愿者</a></li>
+                <li class="user-info">
+                    <span class="points">法力值: <span id="userPoints">0</span></span>
+                    <a href="#profile" class="btn-secondary" id="profileLink">个人中心</a>
+                </li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 三大核心板块 -->
+    <section class="section main-sections">
+        <div class="container">
+            <div class="main-sections-grid">
+                <!-- 成功案例板块 -->
+                <a href="success-cases.html" class="main-section-card success-card-large">
+                    <div class="section-card-icon">✅</div>
+                    <h2 class="section-card-title">成功案例</h2>
+                    <p class="section-card-desc">真实案例，见证正义的力量</p>
+                    <div class="section-card-preview">
+                        <div class="preview-item">
+                            <span class="preview-badge">胜诉</span>
+                            <span class="preview-text">劳动纠纷案 - 追回赔偿金8万元</span>
+                        </div>
+                        <div class="preview-item">
+                            <span class="preview-badge">胜诉</span>
+                            <span class="preview-text">民间借贷案 - 追回借款10万元</span>
+                        </div>
+                        <div class="preview-item">
+                            <span class="preview-badge">调解成功</span>
+                            <span class="preview-text">消费维权案 - 获得全额退款</span>
+                        </div>
+                    </div>
+                    <div class="section-card-footer">
+                        <span>查看更多 →</span>
+                    </div>
+                </a>
+
+                <!-- 法律援助消息板块 -->
+                <a href="legal-aid.html" class="main-section-card aid-card-large">
+                    <div class="section-card-icon">📢</div>
+                    <h2 class="section-card-title">法律援助消息</h2>
+                    <p class="section-card-desc">最新法律援助信息与活动通知</p>
+                    <div class="section-card-preview">
+                        <div class="preview-item urgent">
+                            <span class="preview-icon">🚨</span>
+                            <span class="preview-text">24小时法律援助热线：400-123-4567</span>
+                        </div>
+                        <div class="preview-item">
+                            <span class="preview-icon">📅</span>
+                            <span class="preview-text">每周六免费法律咨询活动</span>
+                        </div>
+                        <div class="preview-item">
+                            <span class="preview-icon">💡</span>
+                            <span class="preview-text">AI智能文书生成功能已上线</span>
+                        </div>
+                    </div>
+                    <div class="section-card-footer">
+                        <span>查看更多 →</span>
+                    </div>
+                </a>
+
+                <!-- 红色案例板块 -->
+                <a href="red-cases.html" class="main-section-card red-card-large">
+                    <div class="section-card-icon">🇨🇳</div>
+                    <h2 class="section-card-title">红色案例</h2>
+                    <p class="section-card-desc">领导讲话、政策解读与法治建设</p>
+                    <div class="section-card-preview">
+                        <div class="preview-item">
+                            <span class="preview-icon">📜</span>
+                            <span class="preview-text">深入学习贯彻习近平法治思想</span>
+                        </div>
+                        <div class="preview-item">
+                            <span class="preview-icon">📋</span>
+                            <span class="preview-text">《民法典》实施一周年政策解读</span>
+                        </div>
+                        <div class="preview-item">
+                            <span class="preview-icon">🏛️</span>
+                            <span class="preview-text">全面推进依法治国新举措</span>
+                        </div>
+                    </div>
+                    <div class="section-card-footer">
+                        <span>查看更多 →</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 个人中心模态框 -->
+    <div id="profileModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>个人中心</h2>
+            <div class="profile-info">
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <span class="stat-value" id="totalPoints">0</span>
+                        <span class="stat-label">总法力值</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="comicsRead">0</span>
+                        <span class="stat-label">已读漫画</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="simulationsDone">0</span>
+                        <span class="stat-label">完成模拟</span>
+                    </div>
+                </div>
+                <div class="profile-actions">
+                    <button class="btn-primary" id="checkInBtn">每日签到</button>
+                    <a href="volunteer.html" class="btn-secondary">志愿者申请</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 脚本 -->
+    <script src="scripts/nav.js"></script>
+    <script src="scripts/user.js"></script>
+    <script src="scripts/home.js"></script>
+</body>
+</html>
