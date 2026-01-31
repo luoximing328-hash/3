@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>法影随行 - 看得懂的法律故事，用得上的维权武器</title>
+    <title>维权工具箱 - 法影随行</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/components.css">
 </head>
@@ -18,10 +18,10 @@
                 </a>
             </div>
             <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link active">首页</a></li>
+                <li><a href="index.html" class="nav-link">首页</a></li>
                 <li><a href="theater.html" class="nav-link">法影剧场</a></li>
                 <li><a href="simulator.html" class="nav-link">正义模拟器</a></li>
-                <li><a href="toolbox.html" class="nav-link">维权工具箱</a></li>
+                <li><a href="toolbox.html" class="nav-link active">维权工具箱</a></li>
                 <li><a href="community.html" class="nav-link">法影社区</a></li>
                 <li class="user-info">
                     <span class="points">法力值: <span id="userPoints">0</span></span>
@@ -36,93 +36,81 @@
         </div>
     </nav>
 
-    <!-- 顶部轮播图区域（占位，可后续替换为真实图片） -->
-    <section class="home-carousel-wrap">
-        <div class="home-carousel">
-            <div class="home-carousel-track">
-                <div class="home-carousel-slide home-carousel-slide-placeholder"></div>
-                <div class="home-carousel-slide home-carousel-slide-placeholder"></div>
-                <div class="home-carousel-slide home-carousel-slide-placeholder"></div>
-            </div>
-        </div>
-        <div class="home-carousel-dots" id="carouselDots" aria-hidden="true"></div>
-    </section>
-
-    <!-- 三大核心板块 -->
-    <section class="section main-sections">
+    <!-- 维权工具箱 -->
+    <section class="section toolbox-section">
         <div class="container">
-            <div class="main-sections-grid">
-                <!-- 法律新闻 -->
-                <a href="legal-aid.html" class="main-section-card news-card-large">
-                    <div class="section-card-icon">📰</div>
-                    <h2 class="section-card-title">法律新闻</h2>
-                    <p class="section-card-desc">最新法律资讯、政策解读与法治动态</p>
-                    <div class="section-card-preview">
-                        <div class="preview-item">
-                            <span class="preview-icon">📜</span>
-                            <span class="preview-text">法律法规与政策解读</span>
-                        </div>
-                        <div class="preview-item">
-                            <span class="preview-icon">🏛️</span>
-                            <span class="preview-text">司法动态与典型案例</span>
-                        </div>
-                        <div class="preview-item">
-                            <span class="preview-icon">📢</span>
-                            <span class="preview-text">法律援助与活动信息</span>
-                        </div>
-                    </div>
-                    <div class="section-card-footer">
-                        <span>查看更多 →</span>
-                    </div>
-                </a>
-
-                <!-- 我们网站的更新 -->
-                <a href="legal-aid.html" class="main-section-card updates-card-large">
-                    <div class="section-card-icon">📢</div>
-                    <h2 class="section-card-title">我们网站的更新</h2>
-                    <p class="section-card-desc">功能更新、活动与法律援助动态</p>
-                    <div class="section-card-preview">
-                        <div class="preview-item">
-                            <span class="preview-icon">🆕</span>
-                            <span class="preview-text">正义模拟器、人格测试等新功能上线</span>
-                        </div>
-                        <div class="preview-item">
-                            <span class="preview-icon">📅</span>
-                            <span class="preview-text">法律援助活动与热线信息</span>
-                        </div>
-                        <div class="preview-item">
-                            <span class="preview-icon">💡</span>
-                            <span class="preview-text">法影剧场漫画与逻辑罗盘持续更新</span>
+            <div class="section-header">
+                <h2 class="section-title">维权工具箱</h2>
+                <p class="section-subtitle">AI智慧助诉，低成本法律服务</p>
+            </div>
+            <div class="toolbox-container">
+                <div class="chat-interface" id="chatInterface">
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message bot-message">
+                            <div class="message-avatar">🤖</div>
+                            <div class="message-content">
+                                <p>您好！我是法影助手，可以帮您：</p>
+                                <ul>
+                                    <li>📋 生成起诉状、答辩状等法律文书</li>
+                                    <li>📊 进行诉前风险评估</li>
+                                    <li>📁 整理证据清单</li>
+                                    <li>💡 提供法律咨询建议</li>
+                                </ul>
+                                <p>请描述您遇到的法律问题，我会为您提供帮助。</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="section-card-footer">
-                        <span>查看更新 →</span>
-                    </div>
-                </a>
-
-                <!-- 跳转到社区 -->
-                <a href="community.html" class="main-section-card community-card-large">
-                    <div class="section-card-icon">👥</div>
-                    <h2 class="section-card-title">法影社区</h2>
-                    <p class="section-card-desc">交流经验、分享故事，与同路人一起前行</p>
-                    <div class="section-card-preview">
-                        <div class="preview-item">
-                            <span class="preview-icon">💭</span>
-                            <span class="preview-text">发帖提问、参与讨论</span>
+                    <div class="chat-input-area">
+                        <div class="service-tiers">
+                            <span class="tier-badge free">免费初诊</span>
+                            <span class="tier-badge points">积分兑换</span>
+                            <span class="tier-badge premium">增值服务</span>
                         </div>
-                        <div class="preview-item">
-                            <span class="preview-icon">🌟</span>
-                            <span class="preview-text">精选好帖与热门话题</span>
-                        </div>
-                        <div class="preview-item">
-                            <span class="preview-icon">🤝</span>
-                            <span class="preview-text">互帮互助，共建法治氛围</span>
+                        <div class="input-wrapper">
+                            <textarea id="chatInput" placeholder="描述您的法律问题..."></textarea>
+                            <button class="btn-primary" id="sendBtn">发送</button>
                         </div>
                     </div>
-                    <div class="section-card-footer">
-                        <span>进入社区 →</span>
+                </div>
+                <div class="toolbox-sidebar">
+                    <div class="service-card">
+                        <h3>服务等级</h3>
+                        <div class="service-item">
+                            <span class="service-name">免费初诊</span>
+                            <span class="service-price">免费</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">积分兑换</span>
+                            <span class="service-price">100法力值</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">单项服务</span>
+                            <span class="service-price">¥9.9</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">综合服务</span>
+                            <span class="service-price">¥19.9</span>
+                        </div>
                     </div>
-                </a>
+                    <div class="recharge-card">
+                        <h3>充值</h3>
+                        <div class="recharge-option" data-plan="single">
+                            <span class="recharge-name">按次</span>
+                            <span class="recharge-price">¥9.9/次</span>
+                            <button type="button" class="btn-recharge">购买</button>
+                        </div>
+                        <div class="recharge-option" data-plan="monthly">
+                            <span class="recharge-name">按月</span>
+                            <span class="recharge-price">¥29.9/月</span>
+                            <button type="button" class="btn-recharge">购买</button>
+                        </div>
+                        <div class="recharge-option" data-plan="yearly">
+                            <span class="recharge-name">按年</span>
+                            <span class="recharge-price">¥199/年</span>
+                            <button type="button" class="btn-recharge">购买</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -258,6 +246,6 @@
     <!-- 脚本 -->
     <script src="scripts/nav.js"></script>
     <script src="scripts/user.js"></script>
-    <script src="scripts/home.js"></script>
+    <script src="scripts/toolbox.js"></script>
 </body>
 </html>

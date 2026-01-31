@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>法影随行 - 看得懂的法律故事，用得上的维权武器</title>
+    <title>法律援助消息 - 法影随行</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/components.css">
 </head>
@@ -18,7 +18,7 @@
                 </a>
             </div>
             <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link active">首页</a></li>
+                <li><a href="index.html" class="nav-link">首页</a></li>
                 <li><a href="theater.html" class="nav-link">法影剧场</a></li>
                 <li><a href="simulator.html" class="nav-link">正义模拟器</a></li>
                 <li><a href="toolbox.html" class="nav-link">维权工具箱</a></li>
@@ -36,93 +36,54 @@
         </div>
     </nav>
 
-    <!-- 顶部轮播图区域（占位，可后续替换为真实图片） -->
-    <section class="home-carousel-wrap">
-        <div class="home-carousel">
-            <div class="home-carousel-track">
-                <div class="home-carousel-slide home-carousel-slide-placeholder"></div>
-                <div class="home-carousel-slide home-carousel-slide-placeholder"></div>
-                <div class="home-carousel-slide home-carousel-slide-placeholder"></div>
-            </div>
-        </div>
-        <div class="home-carousel-dots" id="carouselDots" aria-hidden="true"></div>
-    </section>
-
-    <!-- 三大核心板块 -->
-    <section class="section main-sections">
+    <!-- 法律援助消息 -->
+    <section class="section aid-section">
         <div class="container">
-            <div class="main-sections-grid">
-                <!-- 法律新闻 -->
-                <a href="legal-aid.html" class="main-section-card news-card-large">
-                    <div class="section-card-icon">📰</div>
-                    <h2 class="section-card-title">法律新闻</h2>
-                    <p class="section-card-desc">最新法律资讯、政策解读与法治动态</p>
-                    <div class="section-card-preview">
-                        <div class="preview-item">
-                            <span class="preview-icon">📜</span>
-                            <span class="preview-text">法律法规与政策解读</span>
-                        </div>
-                        <div class="preview-item">
-                            <span class="preview-icon">🏛️</span>
-                            <span class="preview-text">司法动态与典型案例</span>
-                        </div>
-                        <div class="preview-item">
-                            <span class="preview-icon">📢</span>
-                            <span class="preview-text">法律援助与活动信息</span>
-                        </div>
+            <div class="section-header">
+                <h2 class="section-title">法律援助消息</h2>
+                <p class="section-subtitle">最新法律援助信息与活动通知</p>
+            </div>
+            <div class="aid-messages">
+                <div class="aid-card urgent">
+                    <div class="aid-icon">🚨</div>
+                    <div class="aid-content">
+                        <h3>紧急法律援助</h3>
+                        <p>如果您遇到紧急法律问题，可拨打24小时法律援助热线：400-123-4567</p>
+                        <span class="aid-time">2025-01-26</span>
                     </div>
-                    <div class="section-card-footer">
-                        <span>查看更多 →</span>
+                </div>
+                <div class="aid-card">
+                    <div class="aid-icon">📢</div>
+                    <div class="aid-content">
+                        <h3>免费法律咨询活动</h3>
+                        <p>每周六下午2点，平台将举办免费法律咨询活动，专业律师在线答疑</p>
+                        <span class="aid-time">2025-01-25</span>
                     </div>
-                </a>
-
-                <!-- 我们网站的更新 -->
-                <a href="legal-aid.html" class="main-section-card updates-card-large">
-                    <div class="section-card-icon">📢</div>
-                    <h2 class="section-card-title">我们网站的更新</h2>
-                    <p class="section-card-desc">功能更新、活动与法律援助动态</p>
-                    <div class="section-card-preview">
-                        <div class="preview-item">
-                            <span class="preview-icon">🆕</span>
-                            <span class="preview-text">正义模拟器、人格测试等新功能上线</span>
-                        </div>
-                        <div class="preview-item">
-                            <span class="preview-icon">📅</span>
-                            <span class="preview-text">法律援助活动与热线信息</span>
-                        </div>
-                        <div class="preview-item">
-                            <span class="preview-icon">💡</span>
-                            <span class="preview-text">法影剧场漫画与逻辑罗盘持续更新</span>
-                        </div>
+                </div>
+                <div class="aid-card">
+                    <div class="aid-icon">💡</div>
+                    <div class="aid-content">
+                        <h3>新功能上线</h3>
+                        <p>AI智能文书生成功能已上线，使用积分即可兑换专业法律文书服务</p>
+                        <span class="aid-time">2025-01-24</span>
                     </div>
-                    <div class="section-card-footer">
-                        <span>查看更新 →</span>
+                </div>
+                <div class="aid-card">
+                    <div class="aid-icon">📚</div>
+                    <div class="aid-content">
+                        <h3>法律知识讲座</h3>
+                        <p>本周日晚上7点，将举办"大学生常见法律问题"专题讲座，欢迎参加</p>
+                        <span class="aid-time">2025-01-23</span>
                     </div>
-                </a>
-
-                <!-- 跳转到社区 -->
-                <a href="community.html" class="main-section-card community-card-large">
-                    <div class="section-card-icon">👥</div>
-                    <h2 class="section-card-title">法影社区</h2>
-                    <p class="section-card-desc">交流经验、分享故事，与同路人一起前行</p>
-                    <div class="section-card-preview">
-                        <div class="preview-item">
-                            <span class="preview-icon">💭</span>
-                            <span class="preview-text">发帖提问、参与讨论</span>
-                        </div>
-                        <div class="preview-item">
-                            <span class="preview-icon">🌟</span>
-                            <span class="preview-text">精选好帖与热门话题</span>
-                        </div>
-                        <div class="preview-item">
-                            <span class="preview-icon">🤝</span>
-                            <span class="preview-text">互帮互助，共建法治氛围</span>
-                        </div>
+                </div>
+                <div class="aid-card">
+                    <div class="aid-icon">🎁</div>
+                    <div class="aid-content">
+                        <h3>新用户福利</h3>
+                        <p>新注册用户可获得100法力值，可用于兑换法律文书生成服务</p>
+                        <span class="aid-time">2025-01-22</span>
                     </div>
-                    <div class="section-card-footer">
-                        <span>进入社区 →</span>
-                    </div>
-                </a>
+                </div>
             </div>
         </div>
     </section>
@@ -254,10 +215,12 @@
             </div>
         </div>
     </div>
+            </div>
+        </div>
+    </div>
 
     <!-- 脚本 -->
     <script src="scripts/nav.js"></script>
     <script src="scripts/user.js"></script>
-    <script src="scripts/home.js"></script>
 </body>
 </html>

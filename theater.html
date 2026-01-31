@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>法影随行 - 看得懂的法律故事，用得上的维权武器</title>
+    <title>法影剧场 - 法影随行</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/components.css">
 </head>
@@ -18,8 +18,8 @@
                 </a>
             </div>
             <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link active">首页</a></li>
-                <li><a href="theater.html" class="nav-link">法影剧场</a></li>
+                <li><a href="index.html" class="nav-link">首页</a></li>
+                <li><a href="theater.html" class="nav-link active">法影剧场</a></li>
                 <li><a href="simulator.html" class="nav-link">正义模拟器</a></li>
                 <li><a href="toolbox.html" class="nav-link">维权工具箱</a></li>
                 <li><a href="community.html" class="nav-link">法影社区</a></li>
@@ -36,93 +36,53 @@
         </div>
     </nav>
 
-    <!-- 顶部轮播图区域（占位，可后续替换为真实图片） -->
-    <section class="home-carousel-wrap">
-        <div class="home-carousel">
-            <div class="home-carousel-track">
-                <div class="home-carousel-slide home-carousel-slide-placeholder"></div>
-                <div class="home-carousel-slide home-carousel-slide-placeholder"></div>
-                <div class="home-carousel-slide home-carousel-slide-placeholder"></div>
-            </div>
-        </div>
-        <div class="home-carousel-dots" id="carouselDots" aria-hidden="true"></div>
-    </section>
-
-    <!-- 三大核心板块 -->
-    <section class="section main-sections">
+    <!-- 法影剧场 -->
+    <section class="section theater-section">
         <div class="container">
-            <div class="main-sections-grid">
-                <!-- 法律新闻 -->
-                <a href="legal-aid.html" class="main-section-card news-card-large">
-                    <div class="section-card-icon">📰</div>
-                    <h2 class="section-card-title">法律新闻</h2>
-                    <p class="section-card-desc">最新法律资讯、政策解读与法治动态</p>
-                    <div class="section-card-preview">
-                        <div class="preview-item">
-                            <span class="preview-icon">📜</span>
-                            <span class="preview-text">法律法规与政策解读</span>
-                        </div>
-                        <div class="preview-item">
-                            <span class="preview-icon">🏛️</span>
-                            <span class="preview-text">司法动态与典型案例</span>
-                        </div>
-                        <div class="preview-item">
-                            <span class="preview-icon">📢</span>
-                            <span class="preview-text">法律援助与活动信息</span>
-                        </div>
-                    </div>
-                    <div class="section-card-footer">
-                        <span>查看更多 →</span>
-                    </div>
-                </a>
+            <div class="section-header">
+                <h2 class="section-title">法影剧场</h2>
+                <p class="section-subtitle">真实案例漫改，让法律故事生动有趣</p>
+            </div>
 
-                <!-- 我们网站的更新 -->
-                <a href="legal-aid.html" class="main-section-card updates-card-large">
-                    <div class="section-card-icon">📢</div>
-                    <h2 class="section-card-title">我们网站的更新</h2>
-                    <p class="section-card-desc">功能更新、活动与法律援助动态</p>
-                    <div class="section-card-preview">
-                        <div class="preview-item">
-                            <span class="preview-icon">🆕</span>
-                            <span class="preview-text">正义模拟器、人格测试等新功能上线</span>
-                        </div>
-                        <div class="preview-item">
-                            <span class="preview-icon">📅</span>
-                            <span class="preview-text">法律援助活动与热线信息</span>
-                        </div>
-                        <div class="preview-item">
-                            <span class="preview-icon">💡</span>
-                            <span class="preview-text">法影剧场漫画与逻辑罗盘持续更新</span>
-                        </div>
-                    </div>
-                    <div class="section-card-footer">
-                        <span>查看更新 →</span>
-                    </div>
-                </a>
+            <!-- 标签页切换 -->
+            <div class="theater-tabs">
+                <button class="tab-btn active" data-tab="comics">
+                    <span class="tab-icon">🎭</span>
+                    <span class="tab-text">案例漫画</span>
+                </button>
+                <button class="tab-btn" data-tab="compass">
+                    <span class="tab-icon">🧭</span>
+                    <span class="tab-text">逻辑罗盘</span>
+                </button>
+            </div>
 
-                <!-- 跳转到社区 -->
-                <a href="community.html" class="main-section-card community-card-large">
-                    <div class="section-card-icon">👥</div>
-                    <h2 class="section-card-title">法影社区</h2>
-                    <p class="section-card-desc">交流经验、分享故事，与同路人一起前行</p>
-                    <div class="section-card-preview">
-                        <div class="preview-item">
-                            <span class="preview-icon">💭</span>
-                            <span class="preview-text">发帖提问、参与讨论</span>
-                        </div>
-                        <div class="preview-item">
-                            <span class="preview-icon">🌟</span>
-                            <span class="preview-text">精选好帖与热门话题</span>
-                        </div>
-                        <div class="preview-item">
-                            <span class="preview-icon">🤝</span>
-                            <span class="preview-text">互帮互助，共建法治氛围</span>
+            <!-- 案例漫画模块 -->
+            <div class="tab-content active" id="comicsTab">
+                <div class="theater-filters">
+                    <button class="filter-btn active" data-filter="all">全部</button>
+                    <button class="filter-btn" data-filter="contract">合同纠纷</button>
+                    <button class="filter-btn" data-filter="labor">劳动争议</button>
+                    <button class="filter-btn" data-filter="property">财产纠纷</button>
+                    <button class="filter-btn" data-filter="consumer">消费维权</button>
+                </div>
+                <div class="comic-grid" id="comicGrid">
+                    <!-- 漫画卡片将通过JS动态生成 -->
+                </div>
+            </div>
+
+            <!-- 逻辑罗盘模块 -->
+            <div class="tab-content" id="compassTab">
+                <div class="compass-module">
+                    <div class="compass-search">
+                        <input type="text" id="documentSearch" placeholder="输入案号或关键词搜索裁判文书..." class="search-input">
+                        <button class="btn-primary" id="searchBtn">搜索</button>
+                    </div>
+                    <div class="compass-demo" id="compassDemo">
+                        <div class="demo-placeholder">
+                            <p>🔍 搜索或选择一个示例案例开始分析</p>
                         </div>
                     </div>
-                    <div class="section-card-footer">
-                        <span>进入社区 →</span>
-                    </div>
-                </a>
+                </div>
             </div>
         </div>
     </section>
@@ -146,20 +106,6 @@
                         <span class="stat-value" id="simulationsDone">0</span>
                         <span class="stat-label">完成模拟</span>
                     </div>
-                </div>
-                <div class="profile-points-intro">
-                    <h3>获取法力值</h3>
-                    <ul class="points-intro-list">
-                        <li>📖 阅读漫画 +10</li>
-                        <li>🎮 完成模拟 +20</li>
-                        <li>🃏 答对题目 +5</li>
-                        <li>📅 每日签到 +15</li>
-                    </ul>
-                </div>
-                <div class="profile-exchange-section">
-                    <h3>积分兑换</h3>
-                    <p class="profile-exchange-desc">用法力值兑换免费问答或折扣券</p>
-                    <button type="button" class="btn-primary" id="openExchangeBtn">积分兑换 / 兑换折扣</button>
                 </div>
                 <div class="volunteer-section-profile">
                     <h3>志愿者认证</h3>
@@ -258,6 +204,8 @@
     <!-- 脚本 -->
     <script src="scripts/nav.js"></script>
     <script src="scripts/user.js"></script>
-    <script src="scripts/home.js"></script>
+    <script src="scripts/theater.js"></script>
+    <script src="scripts/compass.js"></script>
+    <script src="scripts/theater-tabs.js"></script>
 </body>
 </html>

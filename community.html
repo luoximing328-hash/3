@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>法影随行 - 看得懂的法律故事，用得上的维权武器</title>
+    <title>法影社区 - 法影随行</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/components.css">
 </head>
@@ -18,11 +18,11 @@
                 </a>
             </div>
             <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link active">首页</a></li>
+                <li><a href="index.html" class="nav-link">首页</a></li>
                 <li><a href="theater.html" class="nav-link">法影剧场</a></li>
                 <li><a href="simulator.html" class="nav-link">正义模拟器</a></li>
                 <li><a href="toolbox.html" class="nav-link">维权工具箱</a></li>
-                <li><a href="community.html" class="nav-link">法影社区</a></li>
+                <li><a href="community.html" class="nav-link active">法影社区</a></li>
                 <li class="user-info">
                     <span class="points">法力值: <span id="userPoints">0</span></span>
                     <a href="#profile" class="btn-secondary" id="profileLink">个人中心</a>
@@ -36,96 +36,98 @@
         </div>
     </nav>
 
-    <!-- 顶部轮播图区域（占位，可后续替换为真实图片） -->
-    <section class="home-carousel-wrap">
-        <div class="home-carousel">
-            <div class="home-carousel-track">
-                <div class="home-carousel-slide home-carousel-slide-placeholder"></div>
-                <div class="home-carousel-slide home-carousel-slide-placeholder"></div>
-                <div class="home-carousel-slide home-carousel-slide-placeholder"></div>
-            </div>
-        </div>
-        <div class="home-carousel-dots" id="carouselDots" aria-hidden="true"></div>
-    </section>
-
-    <!-- 三大核心板块 -->
-    <section class="section main-sections">
+    <!-- 法影社区 -->
+    <section class="section community-section">
         <div class="container">
-            <div class="main-sections-grid">
-                <!-- 法律新闻 -->
-                <a href="legal-aid.html" class="main-section-card news-card-large">
-                    <div class="section-card-icon">📰</div>
-                    <h2 class="section-card-title">法律新闻</h2>
-                    <p class="section-card-desc">最新法律资讯、政策解读与法治动态</p>
-                    <div class="section-card-preview">
-                        <div class="preview-item">
-                            <span class="preview-icon">📜</span>
-                            <span class="preview-text">法律法规与政策解读</span>
-                        </div>
-                        <div class="preview-item">
-                            <span class="preview-icon">🏛️</span>
-                            <span class="preview-text">司法动态与典型案例</span>
-                        </div>
-                        <div class="preview-item">
-                            <span class="preview-icon">📢</span>
-                            <span class="preview-text">法律援助与活动信息</span>
-                        </div>
-                    </div>
-                    <div class="section-card-footer">
-                        <span>查看更多 →</span>
-                    </div>
-                </a>
+            <div class="section-header">
+                <h2 class="section-title">法影社区</h2>
+                <p class="section-subtitle">分享诉讼经验，交流维权心得</p>
+            </div>
 
-                <!-- 我们网站的更新 -->
-                <a href="legal-aid.html" class="main-section-card updates-card-large">
-                    <div class="section-card-icon">📢</div>
-                    <h2 class="section-card-title">我们网站的更新</h2>
-                    <p class="section-card-desc">功能更新、活动与法律援助动态</p>
-                    <div class="section-card-preview">
-                        <div class="preview-item">
-                            <span class="preview-icon">🆕</span>
-                            <span class="preview-text">正义模拟器、人格测试等新功能上线</span>
-                        </div>
-                        <div class="preview-item">
-                            <span class="preview-icon">📅</span>
-                            <span class="preview-text">法律援助活动与热线信息</span>
-                        </div>
-                        <div class="preview-item">
-                            <span class="preview-icon">💡</span>
-                            <span class="preview-text">法影剧场漫画与逻辑罗盘持续更新</span>
-                        </div>
-                    </div>
-                    <div class="section-card-footer">
-                        <span>查看更新 →</span>
-                    </div>
-                </a>
+            <!-- 发帖按钮 -->
+            <div class="post-action-bar">
+                <button class="btn-primary" id="createPostBtn">
+                    <span>✍️</span>
+                    <span>分享我的诉讼经验</span>
+                </button>
+            </div>
 
-                <!-- 跳转到社区 -->
-                <a href="community.html" class="main-section-card community-card-large">
-                    <div class="section-card-icon">👥</div>
-                    <h2 class="section-card-title">法影社区</h2>
-                    <p class="section-card-desc">交流经验、分享故事，与同路人一起前行</p>
-                    <div class="section-card-preview">
-                        <div class="preview-item">
-                            <span class="preview-icon">💭</span>
-                            <span class="preview-text">发帖提问、参与讨论</span>
-                        </div>
-                        <div class="preview-item">
-                            <span class="preview-icon">🌟</span>
-                            <span class="preview-text">精选好帖与热门话题</span>
-                        </div>
-                        <div class="preview-item">
-                            <span class="preview-icon">🤝</span>
-                            <span class="preview-text">互帮互助，共建法治氛围</span>
-                        </div>
+            <!-- 精选贴展示 -->
+            <div class="featured-posts-section">
+                <h3 class="subsection-title">
+                    <span class="title-icon">⭐</span>
+                    精选贴
+                </h3>
+                <div class="featured-posts-grid" id="featuredPosts">
+                    <!-- 精选贴将通过JS动态生成 -->
+                </div>
+            </div>
+
+            <!-- 全部帖子 -->
+            <div class="all-posts-section">
+                <div class="posts-header">
+                    <h3 class="subsection-title">全部帖子</h3>
+                    <div class="posts-filters">
+                        <button class="filter-btn active" data-filter="all">全部</button>
+                        <button class="filter-btn" data-filter="labor">劳动争议</button>
+                        <button class="filter-btn" data-filter="contract">合同纠纷</button>
+                        <button class="filter-btn" data-filter="consumer">消费维权</button>
+                        <button class="filter-btn" data-filter="property">财产纠纷</button>
                     </div>
-                    <div class="section-card-footer">
-                        <span>进入社区 →</span>
-                    </div>
-                </a>
+                </div>
+                <div class="posts-list" id="postsList">
+                    <!-- 帖子列表将通过JS动态生成 -->
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- 发帖模态框 -->
+    <div id="createPostModal" class="modal">
+        <div class="modal-content modal-large">
+            <span class="modal-close">&times;</span>
+            <h2>分享诉讼经验</h2>
+            <form id="postForm">
+                <div class="form-group">
+                    <label for="postTitle">标题 *</label>
+                    <input type="text" id="postTitle" name="title" placeholder="请输入标题..." required>
+                </div>
+                <div class="form-group">
+                    <label for="postCategory">分类 *</label>
+                    <select id="postCategory" name="category" required>
+                        <option value="">请选择分类</option>
+                        <option value="labor">劳动争议</option>
+                        <option value="contract">合同纠纷</option>
+                        <option value="consumer">消费维权</option>
+                        <option value="property">财产纠纷</option>
+                        <option value="other">其他</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="postContent">内容 *</label>
+                    <textarea id="postContent" name="content" rows="10" placeholder="请详细描述您的诉讼经历、遇到的问题、解决过程和经验总结..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="postTags">标签（可选，用逗号分隔）</label>
+                    <input type="text" id="postTags" name="tags" placeholder="如：劳动仲裁、证据收集、胜诉经验">
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" id="cancelPostBtn">取消</button>
+                    <button type="submit" class="btn-primary">发布</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 帖子详情模态框 -->
+    <div id="postDetailModal" class="modal">
+        <div class="modal-content modal-large">
+            <span class="modal-close">&times;</span>
+            <div id="postDetailContent">
+                <!-- 帖子详情将通过JS动态生成 -->
+            </div>
+        </div>
+    </div>
 
     <!-- 个人中心模态框 -->
     <div id="profileModal" class="modal">
@@ -168,7 +170,6 @@
                 <div class="profile-actions">
                     <button class="btn-primary" id="checkInBtn">每日签到</button>
                     <button class="btn-secondary" id="volunteerBtn">申请志愿者认证</button>
-                    <a href="community.html" class="btn-secondary">法影社区</a>
                 </div>
             </div>
         </div>
@@ -254,10 +255,27 @@
             </div>
         </div>
     </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 志愿者模块（折叠） -->
+    <section id="volunteer" class="section volunteer-section" style="display: none;">
+        <div class="container">
+            <!-- 志愿者内容保持原有功能 -->
+            <div id="unverifiedContent" class="volunteer-content">
+                <div class="section-header">
+                    <h2 class="section-title">成为志愿者</h2>
+                    <p class="section-subtitle">加入我们，用专业知识帮助更多人</p>
+                </div>
+                <!-- 志愿者表单等内容 -->
+            </div>
+        </div>
+    </section>
 
     <!-- 脚本 -->
     <script src="scripts/nav.js"></script>
     <script src="scripts/user.js"></script>
-    <script src="scripts/home.js"></script>
+    <script src="scripts/community.js"></script>
 </body>
 </html>

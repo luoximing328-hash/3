@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>正义模拟器 - 法影随行</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                    <h1>法影随行</h1>
+                    <span class="slogan">看得懂的法律故事，用得上的维权武器</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">首页</a></li>
+                <li><a href="theater.html" class="nav-link">法影剧场</a></li>
+                <li><a href="simulator.html" class="nav-link active">正义模拟器</a></li>
+                <li><a href="toolbox.html" class="nav-link">维权工具箱</a></li>
+                <li><a href="community.html" class="nav-link">法影社区</a></li>
+                <li class="user-info">
+                    <span class="points">法力值: <span id="userPoints">0</span></span>
+                    <a href="#profile" class="btn-secondary" id="profileLink">个人中心</a>
+                </li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 正义模拟器 -->
+    <section class="section simulator-section">
+        <div class="container">
+            <div class="section-header-compact">
+                <h2 class="section-title-compact">正义模拟器</h2>
+                <p class="section-subtitle-compact">诉前演练，提前体验庭审流程</p>
+            </div>
+
+            <!-- 统一容器框 -->
+            <div class="simulator-container">
+                <!-- 修罗场模式 - 主要功能 -->
+                <div class="scenario-main-box" data-mode="scenario">
+                    <div class="scenario-badge-compact">核心功能</div>
+                    <div class="scenario-icon-compact">🏛️</div>
+                    <h3 class="scenario-title-compact">修罗场模式</h3>
+                    <p class="scenario-desc-compact">选择真实场景，AI扮演法官或对方律师，进行模拟庭审</p>
+                    <div class="scenario-features-compact">
+                        <span>⚖️ 真实庭审</span>
+                        <span>📊 胜诉预测</span>
+                        <span>💡 专业建议</span>
+                    </div>
+                    <button class="btn-primary-compact">开始演练</button>
+                </div>
+
+                <!-- 卡牌答题 -->
+                <div class="mode-box" data-mode="card">
+                    <div class="mode-badge-compact">知识学习</div>
+                    <div class="mode-icon-compact">🃏</div>
+                    <h4 class="mode-title-compact">卡牌答题</h4>
+                    <p class="mode-desc-compact">法律知识卡牌闯关，赚取法力值</p>
+                    <div class="mode-points-compact">+5 法力值/题</div>
+                    <button class="btn-mode-compact">开始答题</button>
+                </div>
+
+                <!-- 人格测试 -->
+                <div class="mode-box" data-mode="personality">
+                    <div class="mode-badge-compact">性格分析</div>
+                    <div class="mode-icon-compact">🧠</div>
+                    <h4 class="mode-title-compact">人格测试</h4>
+                    <p class="mode-desc-compact">测试法律人格类型，了解维权风格</p>
+                    <div class="mode-points-compact">+15 法力值</div>
+                    <button class="btn-mode-compact">开始测试</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 模拟器模态框 -->
+    <div id="simulatorModal" class="modal">
+        <div class="modal-content modal-large">
+            <span class="modal-close">&times;</span>
+            <div id="simulatorContent">
+                <!-- 模拟器内容将通过JS动态生成 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 个人中心模态框 -->
+    <div id="profileModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>个人中心</h2>
+            <div class="profile-info">
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <span class="stat-value" id="totalPoints">0</span>
+                        <span class="stat-label">总法力值</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="comicsRead">0</span>
+                        <span class="stat-label">已读漫画</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="simulationsDone">0</span>
+                        <span class="stat-label">完成模拟</span>
+                    </div>
+                </div>
+                <div class="profile-points-intro">
+                    <h3>获取法力值</h3>
+                    <ul class="points-intro-list">
+                        <li>📖 阅读漫画 +10</li>
+                        <li>🎮 完成模拟 +20</li>
+                        <li>🃏 答对题目 +5</li>
+                        <li>📅 每日签到 +15</li>
+                    </ul>
+                </div>
+                <div class="profile-exchange-section">
+                    <h3>积分兑换</h3>
+                    <p class="profile-exchange-desc">用法力值兑换免费问答或折扣券</p>
+                    <button type="button" class="btn-primary" id="openExchangeBtn">积分兑换 / 兑换折扣</button>
+                </div>
+                <div class="volunteer-section-profile">
+                    <h3>志愿者认证</h3>
+                    <div id="volunteerStatus"></div>
+                </div>
+                <div class="profile-actions">
+                    <button class="btn-primary" id="checkInBtn">每日签到</button>
+                    <button class="btn-secondary" id="volunteerBtn">申请志愿者认证</button>
+                    <a href="community.html" class="btn-secondary">法影社区</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 志愿者认证模态框 -->
+    <div id="volunteerModal" class="modal">
+        <div class="modal-content modal-large">
+            <span class="modal-close">&times;</span>
+            <div id="volunteerModalContent">
+                <h2>志愿者认证申请</h2>
+                <p class="section-subtitle">加入我们，用专业知识帮助更多人</p>
+                <div class="volunteer-benefits">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">⏱️</div>
+                        <h3>志愿服务时长认证</h3>
+                        <p>获得官方认证的志愿服务时长，可用于评优、保研等</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">💼</div>
+                        <h3>实战经验积累</h3>
+                        <p>通过审核法律文书，积累真实案例处理经验</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🎓</div>
+                        <h3>专业能力提升</h3>
+                        <p>接触各类法律问题，提升专业能力和法律素养</p>
+                    </div>
+                </div>
+                <form id="certificationForm">
+                    <div class="form-group">
+                        <label for="name">姓名</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="school">学校</label>
+                        <input type="text" id="school" name="school" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="major">专业</label>
+                        <input type="text" id="major" name="major" placeholder="如：法学、法律硕士等" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="grade">年级</label>
+                        <select id="grade" name="grade" required>
+                            <option value="">请选择</option>
+                            <option value="本科一年级">本科一年级</option>
+                            <option value="本科二年级">本科二年级</option>
+                            <option value="本科三年级">本科三年级</option>
+                            <option value="本科四年级">本科四年级</option>
+                            <option value="研究生一年级">研究生一年级</option>
+                            <option value="研究生二年级">研究生二年级</option>
+                            <option value="研究生三年级">研究生三年级</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="studentId">学号</label>
+                        <input type="text" id="studentId" name="studentId" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="idCard">身份证号</label>
+                        <input type="text" id="idCard" name="idCard" pattern="[0-9Xx]{18}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">联系电话</label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{11}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="experience">法律相关经验（选填）</label>
+                        <textarea id="experience" name="experience" rows="4" placeholder="如：实习经历、参与的法律援助活动等"></textarea>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <label>
+                            <input type="checkbox" id="agreeTerms" required>
+                            我已阅读并同意《志愿者服务协议》
+                        </label>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary" onclick="document.getElementById('volunteerModal').style.display='none'">取消</button>
+                        <button type="submit" class="btn-primary">提交认证申请</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 脚本 -->
+    <script src="scripts/nav.js"></script>
+    <script src="scripts/user.js"></script>
+    <script src="scripts/simulator.js"></script>
+    <script src="scripts/personality-test.js"></script>
+</body>
+</html>
