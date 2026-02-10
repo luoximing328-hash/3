@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>维权工具箱 - 法影随行</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/components.css">
+    <title>智慧助诉中心 - 法影随行</title>
+    <link rel="stylesheet" href="styles/main.css?v=3">
+    <link rel="stylesheet" href="styles/components.css?v=3">
 </head>
 <body>
     <!-- 导航栏 -->
@@ -20,8 +20,8 @@
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">首页</a></li>
                 <li><a href="theater.html" class="nav-link">法影剧场</a></li>
-                <li><a href="simulator.html" class="nav-link">正义模拟器</a></li>
-                <li><a href="toolbox.html" class="nav-link active">维权工具箱</a></li>
+                <li><a href="simulator.html" class="nav-link">法庭直通车</a></li>
+                <li><a href="toolbox.html" class="nav-link active">智慧助诉中心</a></li>
                 <li><a href="community.html" class="nav-link">法影社区</a></li>
                 <li class="user-info">
                     <span class="points">法力值: <span id="userPoints">0</span></span>
@@ -36,11 +36,11 @@
         </div>
     </nav>
 
-    <!-- 维权工具箱 -->
+    <!-- 智慧助诉中心 -->
     <section class="section toolbox-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">维权工具箱</h2>
+                <h2 class="section-title">智慧助诉中心</h2>
                 <p class="section-subtitle">AI智慧助诉，低成本法律服务</p>
             </div>
             <div class="toolbox-container">
@@ -74,40 +74,36 @@
                 </div>
                 <div class="toolbox-sidebar">
                     <div class="service-card">
-                        <h3>服务等级</h3>
-                        <div class="service-item">
-                            <span class="service-name">免费初诊</span>
-                            <span class="service-price">免费</span>
+                        <h3>收费模式</h3>
+                        <div class="service-tier">
+                            <div class="service-tier-header">
+                                <span class="service-tier-name">（1）单项服务</span>
+                                <span class="service-tier-price">¥9.9</span>
+                            </div>
+                            <p class="service-tier-desc">用户可根据需求选择网站内某项单项服务。</p>
+                            <p class="service-tier-apply"><strong>适用：</strong>有一定法律基础 / 案件逻辑简单、事因明了</p>
+                            <button type="button" class="btn-recharge btn-recharge-sm">购买</button>
                         </div>
-                        <div class="service-item">
-                            <span class="service-name">积分兑换</span>
-                            <span class="service-price">100法力值</span>
+                        <div class="service-tier">
+                            <div class="service-tier-header">
+                                <span class="service-tier-name">（2）综合服务</span>
+                                <span class="service-tier-price">¥39.9</span>
+                            </div>
+                            <p class="service-tier-desc">用户将案件情况与需求输入，付费完成后由网站提供从起诉状到证据清单的全过程、全系列服务。</p>
+                            <p class="service-tier-apply"><strong>适用：</strong>无法律基础 / 时间紧张，无法独自处理证据链条</p>
+                            <button type="button" class="btn-recharge btn-recharge-sm">购买</button>
                         </div>
-                        <div class="service-item">
-                            <span class="service-name">单项服务</span>
-                            <span class="service-price">¥9.9</span>
-                        </div>
-                        <div class="service-item">
-                            <span class="service-name">综合服务</span>
-                            <span class="service-price">¥19.9</span>
-                        </div>
-                    </div>
-                    <div class="recharge-card">
-                        <h3>充值</h3>
-                        <div class="recharge-option" data-plan="single">
-                            <span class="recharge-name">按次</span>
-                            <span class="recharge-price">¥9.9/次</span>
-                            <button type="button" class="btn-recharge">购买</button>
-                        </div>
-                        <div class="recharge-option" data-plan="monthly">
-                            <span class="recharge-name">按月</span>
-                            <span class="recharge-price">¥29.9/月</span>
-                            <button type="button" class="btn-recharge">购买</button>
-                        </div>
-                        <div class="recharge-option" data-plan="yearly">
-                            <span class="recharge-name">按年</span>
-                            <span class="recharge-price">¥199/年</span>
-                            <button type="button" class="btn-recharge">购买</button>
+                        <div class="service-tier service-tier-deep">
+                            <div class="service-tier-header">
+                                <span class="service-tier-name">（3）深度长期服务</span>
+                            </div>
+                            <p class="service-tier-desc">年卡、季卡、月卡、次数卡等多种形式，金额越高折扣越大，用户按需选择。</p>
+                            <ul class="service-tier-plans">
+                                <li><span class="plan-name">年卡</span><span class="plan-price">¥128.88</span><button type="button" class="btn-recharge btn-recharge-sm">购买</button></li>
+                                <li><span class="plan-name">季卡</span><span class="plan-price">¥59.9</span><button type="button" class="btn-recharge btn-recharge-sm">购买</button></li>
+                                <li><span class="plan-name">月卡</span><span class="plan-price">¥19.9</span><button type="button" class="btn-recharge btn-recharge-sm">购买</button></li>
+                                <li><span class="plan-name">次数卡</span><span class="plan-price">次数越多优惠越大</span><button type="button" class="btn-recharge btn-recharge-sm">购买</button></li>
+                            </ul>
                         </div>
                     </div>
                 </div>

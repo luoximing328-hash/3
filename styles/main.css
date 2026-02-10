@@ -6,15 +6,41 @@
 }
 
 :root {
-    /* 主色调 - 深海蓝 */
-    --primary-blue: #1a365d;
-    --primary-blue-light: #2c5282;
-    --primary-blue-dark: #0f2027;
+    /* 主色调 - #1B3064 */
+    --primary-blue: #1B3064;
+    --primary-blue-light: #2d4a7d;
+    --primary-blue-dark: #0f1d3f;
     
-    /* 辅助色 - 活力橙 */
-    --accent-orange: #ff6b35;
-    --accent-orange-light: #ff8c5a;
-    --accent-orange-dark: #e55a2b;
+    /* 辅助色 - #B0DAE3（浅蓝绿，用于卡片/区块背景） */
+    --accent-light: #B0DAE3;
+    --accent-light-dark: #8fc4d0;
+    
+    /* 强调色/按钮色 - #FF8A00 */
+    --accent-orange: #FF8A00;
+    --accent-orange-light: #ffa033;
+    --accent-orange-dark: #e67a00;
+    
+    /* 板块强调色 */
+    --card-news: #1B3064;
+    --card-updates: #FF8A00;
+    --card-community: #059669;
+    --card-news-bg: #e0e8f2;
+    --card-updates-bg: #fff4e6;
+    --card-community-bg: #d8ede5;
+    
+    /* 页面背景 - 基于 #D9E7F4 的渐变 */
+    --bg-page: linear-gradient(165deg, #D9E7F4 0%, #e0ecf6 35%, #d6e3f2 70%, #dce8f4 100%);
+    --bg-section: linear-gradient(180deg, #e0ecf6 0%, #d6e3f2 50%, #dce8f4 100%);
+    
+    /* 浅蓝绿辅助色 - #B0DAE3 用于卡片/区块 */
+    --accent-card-bg: #B0DAE3;
+    --accent-card-bg-light: #d4e8ed;
+    
+    /* 遮罩层 - 半透明，可叠加在背景上 */
+    --mask-bg: rgba(255, 255, 255, 0.55);
+    --mask-bg-strong: rgba(255, 255, 255, 0.72);
+    --mask-border: rgba(255, 255, 255, 0.5);
+    --mask-blur: 10px;
     
     /* 中性色 */
     --white: #ffffff;
@@ -56,7 +82,8 @@
 body {
     font-family: var(--font-body);
     color: var(--gray-800);
-    background-color: var(--gray-50);
+    background: var(--bg-page);
+    background-attachment: fixed;
     line-height: 1.6;
     overflow-x: hidden;
 }

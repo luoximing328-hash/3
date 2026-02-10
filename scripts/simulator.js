@@ -1,4 +1,4 @@
-// 正义模拟器功能
+// 法庭直通车功能
 const scenarios = [
     {
         id: 1,
@@ -322,7 +322,7 @@ function renderCardGame() {
         }).join('');
 
         simulatorContent.innerHTML = `
-            <h2>卡牌答题</h2>
+            <h2>法理要件速记</h2>
             <p class="card-game-progress">第 ${currentCardIndex + 1} / ${cardQuestions.length} 题</p>
             <div class="card-game-container">
                 <div class="card-flip-wrapper">

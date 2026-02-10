@@ -372,7 +372,7 @@ function handleExchange(type, cost) {
             return;
         }
         localStorage.setItem('hasUsedFreeQA', 'true');
-        alert('兑换成功！您已获得 1 次免费问答服务，可在维权工具箱中使用。');
+        alert('兑换成功！您已获得 1 次免费问答服务，可在智慧助诉中心中使用。');
         return;
     }
 

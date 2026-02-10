@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>逻辑罗盘 - 法影随行</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/main.css?v=3">
+    <link rel="stylesheet" href="styles/components.css?v=3">
 </head>
 <body>
     <!-- 导航栏 -->
@@ -20,9 +20,9 @@
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">首页</a></li>
                 <li><a href="theater.html" class="nav-link">法影剧场</a></li>
-                <li><a href="simulator.html" class="nav-link">正义模拟器</a></li>
+                <li><a href="simulator.html" class="nav-link">法庭直通车</a></li>
                 <li><a href="compass.html" class="nav-link active">逻辑罗盘</a></li>
-                <li><a href="toolbox.html" class="nav-link">维权工具箱</a></li>
+                <li><a href="toolbox.html" class="nav-link">智慧助诉中心</a></li>
                 <li><a href="volunteer.html" class="nav-link">志愿者</a></li>
                 <li class="user-info">
                     <span class="points">法力值: <span id="userPoints">0</span></span>
@@ -48,9 +48,30 @@
                 <input type="text" id="documentSearch" placeholder="输入案号或关键词搜索裁判文书..." class="search-input">
                 <button class="btn-primary" id="searchBtn">搜索</button>
             </div>
-            <div class="compass-demo" id="compassDemo">
-                <div class="demo-placeholder">
-                    <p>🔍 搜索或选择一个示例案例开始分析</p>
+            <div class="compass-content-wrapper">
+                <div class="compass-demo" id="compassDemo">
+                    <div class="demo-placeholder">
+                        <p>🔍 搜索或选择一个示例案例开始分析</p>
+                    </div>
+                </div>
+                <div class="legal-glossary-sidebar" id="legalGlossarySidebar">
+                    <div class="glossary-header">
+                        <h3>📚 法条通俗百科</h3>
+                        <p class="glossary-subtitle">专业名词解释</p>
+                    </div>
+                    <div class="glossary-current-case" id="glossaryCurrentCase">
+                        <h4>本案中的专业名词</h4>
+                        <div class="glossary-terms-list" id="glossaryTermsList">
+                            <p class="glossary-empty">选择案例后，相关专业名词将显示在这里</p>
+                        </div>
+                    </div>
+                    <div class="glossary-search">
+                        <input type="text" id="glossarySearch" placeholder="搜索专业名词..." class="glossary-search-input">
+                    </div>
+                    <div class="glossary-all-terms" id="glossaryAllTerms">
+                        <h4>全部词条</h4>
+                        <div class="glossary-terms-list" id="glossaryAllTermsList"></div>
+                    </div>
                 </div>
             </div>
         </div>
