@@ -23,12 +23,12 @@
 .theater-section .section-header {
     margin-bottom: var(--spacing-xl);
     padding: var(--spacing-md) var(--spacing-lg);
-    background: var(--mask-bg);
-    backdrop-filter: blur(var(--mask-blur));
-    -webkit-backdrop-filter: blur(var(--mask-blur));
+    background: linear-gradient(135deg, rgba(255, 250, 240, 0.9) 0%, rgba(255, 245, 235, 0.85) 100%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-radius: var(--radius-xl);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-    border: 1px solid var(--mask-border);
+    box-shadow: 0 4px 20px rgba(255, 138, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 138, 0, 0.2);
 }
 
 /* 标签页样式 */
@@ -231,12 +231,12 @@
     text-align: center;
     margin-bottom: var(--spacing-xl);
     padding: var(--spacing-md) var(--spacing-lg);
-    background: var(--mask-bg);
-    backdrop-filter: blur(var(--mask-blur));
-    -webkit-backdrop-filter: blur(var(--mask-blur));
+    background: linear-gradient(135deg, rgba(255, 250, 240, 0.9) 0%, rgba(255, 245, 235, 0.85) 100%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-radius: var(--radius-xl);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-    border: 1px solid var(--mask-border);
+    box-shadow: 0 4px 20px rgba(255, 138, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 138, 0, 0.2);
 }
 
 .section-header-compact {
@@ -273,7 +273,7 @@
 
 /* 诉前模拟 - 主要功能 */
 .scenario-main-box {
-    background: url('../图片/5c4a4039773637f84803c5c754f019f1.jpg') center center / cover no-repeat;
+    background: url('../图片/诉前模拟.jpg') center center / cover no-repeat;
     color: var(--white);
     border-radius: var(--radius-lg);
     padding: var(--spacing-lg);
@@ -396,13 +396,59 @@
     border: 1px solid rgba(26, 54, 93, 0.12);
     box-shadow: 0 4px 16px rgba(26, 54, 93, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
     min-height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 法理要件速记 - 背景图片 */
+.mode-box[data-mode="card"] {
+    background: url('../图片/法理要件速记.jpg') center center / cover no-repeat;
+    color: var(--white);
+}
+
+.mode-box[data-mode="card"]::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 32, 39, 0.5);
+    border-radius: var(--radius-xl);
+    z-index: 0;
+}
+
+.mode-box[data-mode="card"] > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* 人格测试 - 背景图片 */
+.mode-box[data-mode="personality"] {
+    background: url('../图片/人格测试.jpg') center center / cover no-repeat;
+    color: var(--white);
+}
+
+.mode-box[data-mode="personality"]::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 32, 39, 0.5);
+    border-radius: var(--radius-xl);
+    z-index: 0;
+}
+
+.mode-box[data-mode="personality"] > * {
+    position: relative;
+    z-index: 1;
 }
 
 .mode-box:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 28px rgba(26, 54, 93, 0.15), 0 4px 12px rgba(0, 0, 0, 0.06);
     border-color: rgba(44, 82, 130, 0.25);
-    background: var(--white);
+}
+
+.mode-box[data-mode="card"]:hover,
+.mode-box[data-mode="personality"]:hover {
+    box-shadow: 0 20px 40px rgba(15, 32, 39, 0.25), 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .mode-badge-compact {
@@ -414,6 +460,13 @@
     font-weight: 600;
     width: fit-content;
     margin-bottom: var(--spacing-sm);
+}
+
+/* 有背景图片的卡片，徽章使用半透明背景 */
+.mode-box[data-mode="card"] .mode-badge-compact,
+.mode-box[data-mode="personality"] .mode-badge-compact {
+    background: rgba(255, 138, 0, 0.95);
+    color: var(--white);
 }
 
 .mode-icon-compact {
@@ -440,6 +493,22 @@
     color: var(--accent-orange);
     font-weight: 600;
     font-size: 0.85rem;
+}
+
+/* 有背景图片的卡片，文字颜色改为白色 */
+.mode-box[data-mode="card"] .mode-title-compact,
+.mode-box[data-mode="personality"] .mode-title-compact {
+    color: var(--white);
+}
+
+.mode-box[data-mode="card"] .mode-desc-compact,
+.mode-box[data-mode="personality"] .mode-desc-compact {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.mode-box[data-mode="card"] .mode-points-compact,
+.mode-box[data-mode="personality"] .mode-points-compact {
+    color: var(--white);
     margin-bottom: var(--spacing-sm);
 }
 
@@ -2421,24 +2490,24 @@
 .community-section .section-header {
     margin-bottom: var(--spacing-xl);
     padding: var(--spacing-md) var(--spacing-lg);
-    background: var(--mask-bg);
-    backdrop-filter: blur(var(--mask-blur));
-    -webkit-backdrop-filter: blur(var(--mask-blur));
+    background: linear-gradient(135deg, rgba(255, 250, 240, 0.9) 0%, rgba(255, 245, 235, 0.85) 100%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-radius: var(--radius-xl);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-    border: 1px solid var(--mask-border);
+    box-shadow: 0 4px 20px rgba(255, 138, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 138, 0, 0.2);
 }
 
 .post-action-bar {
     text-align: center;
     margin-bottom: var(--spacing-xl);
     padding: var(--spacing-md);
-    background: var(--mask-bg);
-    backdrop-filter: blur(var(--mask-blur));
-    -webkit-backdrop-filter: blur(var(--mask-blur));
+    background: linear-gradient(135deg, rgba(255, 250, 240, 0.9) 0%, rgba(255, 245, 235, 0.85) 100%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-radius: var(--radius-xl);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
-    border: 1px solid var(--mask-border);
+    box-shadow: 0 4px 16px rgba(255, 138, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 138, 0, 0.2);
 }
 
 .post-action-bar .btn-primary {

@@ -76,47 +76,58 @@ const scenarios = [
 
 const cardQuestions = [
     {
-        question: '遭遇暴力裁员，正确的维权步骤是？',
+        question: '合同成立的要件包括哪些？',
         options: [
-            { text: '直接到法院起诉', correct: false },
-            { text: '忍气吞声，自认倒霉', correct: false },
-            { text: '收集证据 → 向劳动监察投诉/申请劳动仲裁 → 必要时起诉', correct: true },
-            { text: '只在网上发帖曝光', correct: false }
+            { text: '只需要双方签字即可', correct: false },
+            { text: '当事人具有相应民事行为能力、意思表示真实、标的合法确定', correct: true },
+            { text: '必须有书面形式', correct: false },
+            { text: '只需要支付定金', correct: false }
         ],
-        explanation: '应先收集证据（劳动合同、工资条、聊天记录、辞退通知等），向劳动监察部门投诉或申请劳动仲裁；对仲裁结果不服的，可在法定期限内向法院起诉。',
+        explanation: '合同成立的要件包括：①当事人具有相应的民事行为能力；②意思表示真实；③标的（合同内容）合法、确定、可能。书面形式并非所有合同的成立要件，口头合同、电子合同等也可成立。',
         points: 5
     },
     {
-        question: '借钱没写欠条，只有聊天记录和转账记录，在法律上有效吗？',
+        question: '一般侵权责任的构成要件有哪些？',
         options: [
-            { text: '无效，必须要有书面欠条', correct: false },
-            { text: '有效，聊天记录、转账凭证等可作为证据', correct: true },
-            { text: '只有转账记录有效', correct: false },
-            { text: '必须公证才有效', correct: false }
+            { text: '只需要有损害结果', correct: false },
+            { text: '违法行为、损害事实、因果关系、主观过错', correct: true },
+            { text: '只需要有违法行为', correct: false },
+            { text: '只需要有因果关系', correct: false }
         ],
-        explanation: '口头借贷在法律上有效。根据《民法典》，当事人可以书面、口头或其他形式订立合同。聊天记录、转账凭证、证人等均可作为证据，建议尽量保留完整记录以保障权益。',
+        explanation: '一般侵权责任的构成要件包括：①违法行为（加害行为）；②损害事实（财产或人身损害）；③因果关系（违法行为与损害结果之间有因果关系）；④主观过错（故意或过失）。四个要件缺一不可。',
         points: 5
     },
     {
-        question: '网购商品有质量问题，消费者有权在多少日内退货？',
+        question: '民间借贷合同有效的要件是什么？',
         options: [
-            { text: '3 日', correct: false },
-            { text: '7 日', correct: true },
-            { text: '15 日', correct: false },
-            { text: '30 日', correct: false }
+            { text: '必须签订书面合同', correct: false },
+            { text: '出借人与借款人意思表示一致、借款已实际交付', correct: true },
+            { text: '必须有担保人', correct: false },
+            { text: '必须约定利息', correct: false }
         ],
-        explanation: '根据《消费者权益保护法》，经营者采用网络等方式销售商品，消费者有权自收到商品之日起七日内退货，且无需说明理由（法律另有规定或约定除外）。有质量问题的，更应保障退换货权利。',
+        explanation: '民间借贷合同有效的要件：①双方意思表示真实一致；②借款已实际交付（实践性合同，仅有借条但未实际交付的，合同未成立）；③不违反法律、行政法规的强制性规定。书面形式、担保、利息约定等并非合同有效的必备要件。',
         points: 5
     },
     {
-        question: '房东无理由克扣押金不退，正确的做法是？',
+        question: '劳动合同成立的要件包括哪些？',
         options: [
-            { text: '与房东吵架或强行换锁', correct: false },
-            { text: '先协商 → 协商不成可投诉或收集证据起诉', correct: true },
-            { text: '押金不多就算了', correct: false },
-            { text: '在网上曝光即可，不必走法律程序', correct: false }
+            { text: '只需要口头约定即可', correct: false },
+            { text: '用人单位与劳动者意思表示一致、主体适格、内容合法', correct: true },
+            { text: '必须经过劳动部门审批', correct: false },
+            { text: '只需要支付工资', correct: false }
         ],
-        explanation: '建议先与房东协商并保留沟通记录；协商不成可向当地住建部门、12345 或消费者协会投诉；同时保留合同、转账记录、房屋交接证据等，必要时通过诉讼维护权益。',
+        explanation: '劳动合同成立的要件：①用人单位与劳动者双方意思表示一致；②主体适格（用人单位具有用工主体资格，劳动者具有劳动能力）；③合同内容合法（不违反法律、行政法规强制性规定）。劳动合同应采用书面形式，但未采用书面形式不影响合同成立（事实劳动关系）。',
+        points: 5
+    },
+    {
+        question: '违约责任的构成要件是什么？',
+        options: [
+            { text: '只需要合同无效', correct: false },
+            { text: '合同有效、存在违约行为、无免责事由', correct: true },
+            { text: '只需要有损害结果', correct: false },
+            { text: '只需要有主观过错', correct: false }
+        ],
+        explanation: '违约责任的构成要件：①合同有效成立；②存在违约行为（不履行、迟延履行、不完全履行等）；③无免责事由（如不可抗力、约定免责等）。违约责任适用严格责任原则，一般不需要证明违约方有主观过错（除非法律另有规定）。',
         points: 5
     }
 ];
