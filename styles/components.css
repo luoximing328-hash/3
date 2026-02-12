@@ -402,7 +402,7 @@
 
 /* 法理要件速记 - 背景图片 */
 .mode-box[data-mode="card"] {
-    background: url('../图片/法理要件速记.jpg') center center / cover no-repeat;
+    background: url('../图片/人格测试.jpg') center center / cover no-repeat;
     color: var(--white);
 }
 
@@ -422,7 +422,7 @@
 
 /* 人格测试 - 背景图片 */
 .mode-box[data-mode="personality"] {
-    background: url('../图片/人格测试.jpg') center center / cover no-repeat;
+    background: url('../图片/法理要件速记.jpg') center center / cover no-repeat;
     color: var(--white);
 }
 
@@ -514,21 +514,43 @@
 
 .btn-mode-compact {
     width: 100%;
-    padding: var(--spacing-xs) var(--spacing-md);
-    background: transparent;
-    border: 2px solid var(--primary-blue);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid rgba(255, 255, 255, 0.9);
     color: var(--primary-blue);
     border-radius: var(--radius-md);
-    font-weight: 600;
-    font-size: 0.9rem;
+    font-weight: 700;
+    font-size: 0.95rem;
     cursor: pointer;
     transition: all 0.3s;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 2;
 }
 
 .btn-mode-compact:hover {
-    background: var(--primary-blue);
+    background: var(--accent-orange);
     color: var(--white);
+    border-color: var(--accent-orange);
     transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 138, 0, 0.4);
+}
+
+/* 有背景图片的卡片，按钮使用更明显的样式 */
+.mode-box[data-mode="card"] .btn-mode-compact,
+.mode-box[data-mode="personality"] .btn-mode-compact {
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    color: var(--primary-blue);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mode-box[data-mode="card"] .btn-mode-compact:hover,
+.mode-box[data-mode="personality"] .btn-mode-compact:hover {
+    background: var(--accent-orange);
+    color: var(--white);
+    border-color: var(--accent-orange);
+    box-shadow: 0 4px 12px rgba(255, 138, 0, 0.5);
 }
 
 /* 人格测试样式 */
